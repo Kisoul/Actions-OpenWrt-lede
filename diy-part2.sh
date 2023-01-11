@@ -12,4 +12,4 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
-sed -i 's/R23.1.1/R23.1.1 (Compiled by Kisoul on 01.11.2022)/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/R23.1.1/R23.1.1 (Compiled by Kisoul on 01.11.2023)/g' package/lean/default-settings/files/zzz-default-settings
