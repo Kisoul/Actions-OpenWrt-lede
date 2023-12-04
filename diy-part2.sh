@@ -13,7 +13,7 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
 # Modify default DISTRIB_REVISION
-sed -i 's/R23.5.1/R23.5.1 (Compiled by Kisoul on 05.24.2023)/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/R23.11.11/R23.11.11 (Compiled by Kisoul on 12.05.2023)/g' package/lean/default-settings/files/zzz-default-settings
 # Fix Transmission-web-control
 echo "#修复Transmission-web-control" > fix_file
 echo "sed -i 's#procd_add_jail transmission log#procd_add_jail_mount \"$web_home\"#g' /etc/init.d/transmission" >> fix_file
