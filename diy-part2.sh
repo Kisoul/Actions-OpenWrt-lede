@@ -30,3 +30,6 @@ echo "echo \"	option gateway '192.168.2.1'\" >> /etc/config/network" >> temp_fil
 echo "echo \"	option dns '192.168.2.1'\" >> /etc/config/network" >> temp_file
 cat temp_file >> /etc/config/network
 rm temp_file
+# Fix the conflict between lede and ssmall-package
+rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb}
+
