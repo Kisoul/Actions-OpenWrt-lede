@@ -28,7 +28,7 @@ echo "echo \"	option ipaddr '192.168.2.200'\" >> /etc/config/network" >> temp_fi
 echo "echo \"	option netmask '255.255.255.0'\" >> /etc/config/network" >> temp_file
 echo "echo \"	option gateway '192.168.2.1'\" >> /etc/config/network" >> temp_file
 echo "echo \"	option dns '192.168.2.1'\" >> /etc/config/network" >> temp_file
-cat temp_file >> /etc/config/network
+cat temp_file >> package/lean/default-settings/files/zzz-default-settings
 rm temp_file
 # Fix the conflict between lede and ssmall-package
 rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb}
