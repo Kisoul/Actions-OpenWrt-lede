@@ -38,8 +38,6 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-#    - name: Checkout
-#      uses: actions/checkout@main
     - name: Check Server Performance
       run: |
         echo "警告⚠"
@@ -53,7 +51,10 @@ jobs:
         echo -e "$(sudo lshw -short -C memory | grep GiB) \n"
         echo "--------------------------硬盘信息--------------------------"
         echo "硬盘数量：$(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT
-        
+
+    - name: Checkout
+      uses: actions/checkout@main
+
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
