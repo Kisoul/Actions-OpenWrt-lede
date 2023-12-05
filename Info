@@ -1,0 +1,8 @@
+1.编译openwrt前需要更新系统依赖，请编辑https://raw.githubusercontent.com/Kisoul/openwrt-list/master/depends-ubuntu-2004中的代码，并在.github/workflows/build-openwrt.yml文件中将链接添加到如下代码中：
+- name: Initialization environment
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        sudo -E apt-get -qq update
+        sudo -E apt-get -qq install $(curl -fsSL https://raw.githubusercontent.com/Kisoul/openwrt-list/master/depends-ubuntu-2004)
