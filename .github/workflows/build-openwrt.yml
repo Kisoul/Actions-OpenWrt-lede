@@ -78,8 +78,8 @@ jobs:
     - name: Cache Toolchain
      uses: klever1988/cachewrtbuild@test
      with:
-     ccache: 'true'
-     prefix: ${{ github.workspace }}/openwrt
+       ccache: 'true'
+       prefix: ${{ github.workspace }}/openwrt
         
     - name: Load custom feeds
       run: |
