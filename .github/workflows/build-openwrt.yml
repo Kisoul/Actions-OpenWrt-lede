@@ -84,6 +84,10 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
+
+    - name: Check Space
+      run: |
+        df -h   
     
     - name: Clone source code
       working-directory: /workdir
