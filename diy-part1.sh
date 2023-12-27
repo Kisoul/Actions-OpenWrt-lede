@@ -12,7 +12,7 @@
 
 # Rollback compilation, eg:git checkout <commit_id> 
 # Before Openssl bump 3.0.10 fix transmission
-git checkout a2a0e5b
+# git checkout a2a0e5b
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
