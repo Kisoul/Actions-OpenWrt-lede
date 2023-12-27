@@ -19,7 +19,7 @@ sed -i '/exit 0/d' package/lean/default-settings/files/zzz-default-settings
 # Modify the interface and IP of the Openwrt's wan port
 echo "#修改wan为静态地址\"192.168.2.200\"&修改物理接口为\"eth2\"" > temp_file
 echo "sed -i '/wan/,\$d' /etc/config/network" >> temp_file
-echo "echo \"config interface 'wan'\" >> /etc/config/network" >> temp_file
+echo "echo \"config interface 'wan3'\" >> /etc/config/network" >> temp_file
 echo "echo \" 	 option ifname 'eth2'\" >> /etc/config/network" >> temp_file
 echo "echo \" 	 option proto 'static'\" >> /etc/config/network" >> temp_file
 echo "echo \" 	 option ipaddr '192.168.2.200'\" >> /etc/config/network" >> temp_file
@@ -30,8 +30,15 @@ cat temp_file >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
 rm temp_file
 
+# Modify wan3 interface to WAN area
+echo "#修改wan3接口为WAN区域" > area_file
+echo "sed -i \"s/list network 'wan'/list network 'wan3'/\" /etc/config/firewall" >> area_file
+cat area_file >> package/lean/default-settings/files/zzz-default-settings
+echo "" >> package/lean/default-settings/files/zzz-default-settings
+rm area_file
+
 # Add port forwarding for Openwrt
-echo "#增加外网访问路由的端口转发为"1216"" > port_file
+echo "#增加外网访问路由的转发端口为\"1216\"" > port_file
 echo "echo 'config redirect' >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option target 'DNAT'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option src 'wan'\" >> /etc/config/firewall" >> port_file
