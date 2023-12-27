@@ -32,7 +32,7 @@ rm temp_file
 
 # Modify wan3 interface to WAN area
 echo "#修改wan3接口为WAN区域" > area_file
-echo "sed -i \"s/list network 'wan'/list network 'wan3'/\" /etc/config/firewall" >> area_file
+echo "sed -i \"s/list network 'wan'/list network 'wan3'/\" /etc/config/firewall" > area_file
 cat area_file >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
 rm area_file
