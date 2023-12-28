@@ -19,7 +19,7 @@ sed -i '/exit 0/d' package/lean/default-settings/files/zzz-default-settings
 # Modify the interface and IP of the Openwrt's wan port
 echo "#修改wan为静态地址\"192.168.2.200\"&修改物理接口为\"eth2\"" > temp_file
 echo "sed -i '/wan/,\$d' /etc/config/network" >> temp_file
-echo "echo \"config interface 'wan3'\" >> /etc/config/network" >> temp_file
+echo "echo \"config interface 'wan'\" >> /etc/config/network" >> temp_file
 echo "echo \" 	 option ifname 'eth2'\" >> /etc/config/network" >> temp_file
 echo "echo \" 	 option proto 'static'\" >> /etc/config/network" >> temp_file
 echo "echo \" 	 option ipaddr '192.168.2.200'\" >> /etc/config/network" >> temp_file
