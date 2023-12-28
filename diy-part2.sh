@@ -36,7 +36,6 @@ rm temp_file
 # cat area_file >> package/lean/default-settings/files/zzz-default-settings
 # echo "" >> package/lean/default-settings/files/zzz-default-settings
 # rm area_file
-sed -i "s/list network 'wan'/list network 'wan3'/" package/network/config/firewall/files/firewall.config
 
 # Add port forwarding for Openwrt
 echo "#增加外网访问路由的转发端口为\"1216\"" > port_file
