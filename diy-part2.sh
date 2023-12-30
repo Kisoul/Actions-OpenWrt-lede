@@ -112,21 +112,6 @@ cat port_file >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
 rm port_file
 
-# Add port forwarding for Openwrt-qBittorrent
-echo "#增加外网访问Openwrt-qBittorrent的转发端口为\"8181\"" > port_file
-echo "echo 'config redirect' >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option target 'DNAT'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option src 'wan'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option dest 'lan'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option proto 'tcp udp'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option src_dport '8181'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option dest_ip '192.168.2.1'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option dest_port '8080'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option name 'qBittorrent'\" >> /etc/config/firewall" >> port_file
-cat port_file >> package/lean/default-settings/files/zzz-default-settings
-echo "" >> package/lean/default-settings/files/zzz-default-settings
-rm port_file
-
 # Add port forwarding for Openwrt-Aria2
 echo "#增加外网访问Openwrt-Aria2的转发端口为\"6800\"" > port_file
 echo "echo 'config redirect' >> /etc/config/firewall" >> port_file
@@ -299,10 +284,25 @@ echo "echo \" 	 option target 'DNAT'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option src 'wan'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest 'lan'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option proto 'tcp udp'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option src_dport '8282'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option dest_ip '192.168.2.200'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option src_dport '8080'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest_ip '192.168.5.1'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest_port '8080'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option name 'qBittorrent-test'\" >> /etc/config/firewall" >> port_file
+cat port_file >> package/lean/default-settings/files/zzz-default-settings
+echo "" >> package/lean/default-settings/files/zzz-default-settings
+rm port_file
+
+# Add port forwarding for Openwrt-qBittorrent-test
+echo "#增加外网访问Openwrt-qBittorrent-test的转发端口为\"8181\"" > port_file
+echo "echo 'config redirect' >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option target 'DNAT'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option src 'wan'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest 'lan'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option proto 'tcp udp'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option src_dport '8181'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest_ip '192.168.2.200'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest_port '8080'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option name 'wan-qBittorrent-test'\" >> /etc/config/firewall" >> port_file
 cat port_file >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
 rm port_file
