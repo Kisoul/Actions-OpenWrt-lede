@@ -277,6 +277,21 @@ cat port_file >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
 rm port_file
 
+# Add port forwarding for test-Openwrt(Internet)
+echo "#增加外网访问test-Openwrt的转发端口为\"1217\"" > port_file
+echo "echo 'config redirect' >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option target 'DNAT'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option src 'wan'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest 'lan'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option proto 'tcp udp'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option src_dport '1217'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest_ip '192.168.2.200'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest_port '1217'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option name 'Internet-test'\" >> /etc/config/firewall" >> port_file
+cat port_file >> package/lean/default-settings/files/zzz-default-settings
+echo "" >> package/lean/default-settings/files/zzz-default-settings
+rm port_file
+
 # Add port forwarding for Openwrt-test-SSH
 echo "#增加外网访问Openwrt-test-SSH的转发端口为\"2233\"" > port_file
 echo "echo 'config redirect' >> /etc/config/firewall" >> port_file
@@ -300,8 +315,23 @@ echo "echo \" 	 option src 'wan'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest 'lan'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option proto 'tcp udp'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option src_dport '9093'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option dest_ip '192.168.2.200'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest_ip '192.168.5.1'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest_port '9091'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option name 'test-Transmission'\" >> /etc/config/firewall" >> port_file
+cat port_file >> package/lean/default-settings/files/zzz-default-settings
+echo "" >> package/lean/default-settings/files/zzz-default-settings
+rm port_file
+
+# Add port forwarding for Openwrt-test-Transmission(Internet)
+echo "#增加外网访问Openwrt-test-Transmission的转发端口为\"9093\"" > port_file
+echo "echo 'config redirect' >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option target 'DNAT'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option src 'wan'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest 'lan'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option proto 'tcp udp'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option src_dport '9093'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest_ip '192.168.2.200'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option dest_port '9093'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option name 'test-Transmission'\" >> /etc/config/firewall" >> port_file
 cat port_file >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
