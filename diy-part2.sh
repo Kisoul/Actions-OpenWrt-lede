@@ -272,7 +272,7 @@ echo "echo \" 	 option proto 'tcp udp'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option src_dport '1217'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest_ip '192.168.5.1'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest_port '80'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option name 'Internet-test'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option name 'test-Internet'\" >> /etc/config/firewall" >> port_file
 cat port_file >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
 rm port_file
@@ -283,11 +283,11 @@ echo "echo 'config redirect' >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option target 'DNAT'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option src 'wan'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest 'lan'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option proto 'tcp udp'\" >> /etc/config/firewall" >> port_file
+#echo "echo \" 	 option proto 'tcp udp'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option src_dport '1217'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest_ip '192.168.2.200'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest_port '1217'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option name 'Internet-test'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option name 'test-Internet'\" >> /etc/config/firewall" >> port_file
 cat port_file >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
 rm port_file
