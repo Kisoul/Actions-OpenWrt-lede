@@ -329,7 +329,7 @@ echo "echo \" 	 option target 'DNAT'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option src 'wan'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest 'lan'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option proto 'tcp udp'\" >> /etc/config/firewall" >> port_file
-echo "echo \" 	 option src_dport '9093'\" >> /etc/config/firewall" >> port_file
+echo "echo \" 	 option src_dport '9094'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest_ip '192.168.2.200'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option dest_port '9093'\" >> /etc/config/firewall" >> port_file
 echo "echo \" 	 option name 'wan-test-Transmission'\" >> /etc/config/firewall" >> port_file
