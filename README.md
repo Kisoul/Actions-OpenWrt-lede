@@ -38,6 +38,9 @@ A template for building OpenWrt with GitHub Actions
 - [ActionsRML/delete-workflow-runs](https://github.com/ActionsRML/delete-workflow-runs)
 - [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
 - [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
+- [jlumbroso/free-disk-space](https://github.com/jlumbroso/free-disk-space)
+- [klever1988/cachewrtbuild](https://github.com/klever1988/cachewrtbuild)
+- [P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE)
 
 ## License
 
