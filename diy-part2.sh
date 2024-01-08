@@ -405,9 +405,9 @@ rm fix_file
 sed -i 's/R23.11.11/R23.11.11 (Compiled by Kisoul on 01.01.2024)/g' package/lean/default-settings/files/zzz-default-settings
 
 # Write 'exit 0' at the end of the 'zzz-default-settings' file
-echo "exit 0" > new_file
-cat new_file >> package/lean/default-settings/files/zzz-default-settings
-rm new_file
+echo "exit 0" > fix_file
+cat fix_file >> package/lean/default-settings/files/zzz-default-settings
+rm fix_file
 
 # Fix the conflict between lede and small-package
 rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb}
