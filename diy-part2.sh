@@ -402,7 +402,7 @@ echo "" >> package/lean/default-settings/files/zzz-default-settings
 rm fix_file
 
 # Modify Openwrt's release
-sed -i 's/R23.11.11/R23.11.11 (Compiled by Kisoul on 01.01.2024)/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/R24.8.1/R24.8.1 (Compiled by Kisoul on 08.12.2024)/g' package/lean/default-settings/files/zzz-default-settings
 
 # Write 'exit 0' at the end of the 'zzz-default-settings' file
 echo "exit 0" > fix_file
