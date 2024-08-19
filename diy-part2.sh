@@ -395,14 +395,14 @@ echo "" >> package/lean/default-settings/files/zzz-default-settings
 rm port_file
 
 # Fix Transmission-web-control
-echo "#修复Transmission-web-control" > fix_file
-echo "sed -i 's#procd_add_jail transmission log#procd_add_jail_mount \"$web_home\"#g' /etc/init.d/transmission" >> fix_file
-cat fix_file >> package/lean/default-settings/files/zzz-default-settings
-echo "" >> package/lean/default-settings/files/zzz-default-settings
-rm fix_file
+# echo "#修复Transmission-web-control" > fix_file
+# echo "sed -i 's#procd_add_jail transmission log#procd_add_jail_mount \"$web_home\"#g' /etc/init.d/transmission" >> fix_file
+# cat fix_file >> package/lean/default-settings/files/zzz-default-settings
+# echo "" >> package/lean/default-settings/files/zzz-default-settings
+# rm fix_file
 
 # Modify Openwrt's release
-sed -i 's/R24.8.1/R24.8.1 (Compiled by Kisoul on 08.12.2024)/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/R24.8.1/R24.8.1 (Compiled by Kisoul on 08.19.2024)/g' package/lean/default-settings/files/zzz-default-settings
 
 # Write 'exit 0' at the end of the 'zzz-default-settings' file
 echo "exit 0" > fix_file
