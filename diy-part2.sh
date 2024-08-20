@@ -410,4 +410,4 @@ cat fix_file >> package/lean/default-settings/files/zzz-default-settings
 rm fix_file
 
 # Fix the conflict between lede and small-package
-rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb,transmission-web-control,transmission,luci-app-transmission,aria2}
+rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb,transmission-web-control,transmission,luci-app-transmission,aria2,ariang,qbittorrent,luci-app-qbittorrent}
