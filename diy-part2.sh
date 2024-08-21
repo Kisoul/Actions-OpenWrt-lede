@@ -402,7 +402,7 @@ rm port_file
 # rm fix_file
 
 # Modify Openwrt's release
-sed -i 's/R24.8.1/R24.8.1 (Compiled by Kisoul on 08.20.2024)/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/R24.8.1/R24.8.1 (Compiled by Kisoul on 08.21.2024)/g' package/lean/default-settings/files/zzz-default-settings
 
 # Write 'exit 0' at the end of the 'zzz-default-settings' file
 echo "exit 0" > fix_file
