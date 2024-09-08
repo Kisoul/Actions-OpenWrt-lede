@@ -416,3 +416,7 @@ sed -i '$a exit 0' package/base-files/files/etc/rc.local
 
 # Fix the conflict between lede and small-package
 rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb,transmission-web-control,transmission,luci-app-transmission,aria2,ariang,qbittorrent,luci-app-qbittorrent}
+
+# Fix the Alist between lede and small-package (Resolve Alist The issue of not displaying)
+rm -rf feeds/smpackage/luci-app-alist
+git clone https://github.com/sbwml/luci-app-alist feeds/smpackage/luci-app-alist -b lua --depth=1
